@@ -8,6 +8,8 @@ import reportRoutes from './routes/reports.js';
 
 dotenv.config();
 const app = express();
+const express = require('express');
+
 
 app.use(cors());
 app.use(express.json());
