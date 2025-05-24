@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model Student {
+  id        String  @id @default(uuid())
+  name      String
+  email     String  @unique
+  exams     Exam[]
+}
+
+model Exam {
+  id         String  @id @default(uuid())
+  subject    String
+  score      Int
+  student    Student @relation(fields: [studentId], references: [id])
+  studentId  String
+}
