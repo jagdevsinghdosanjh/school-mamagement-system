@@ -54,6 +54,3 @@ Contributing
 
 License
 This project is MIT Licensed – feel free to use and modify it as needed.
-
-
-
